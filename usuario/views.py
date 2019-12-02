@@ -11,3 +11,4 @@ def registrarse(request):
     else:
         form = UserRegisterForm()
     return render(request, 'usuario/createUsuario.html', {'form': form})
+
