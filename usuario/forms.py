@@ -6,7 +6,6 @@ class UserRegisterForm(UserCreationForm):
     correo = forms.EmailField(max_length=35)
     numero = forms.IntegerField()
     direccion = forms.CharField(max_length=60)
-
     class Meta:
         model = User
         fields = ['username', 'correo', 'numero', 'direccion', 'password1', 'password2']
