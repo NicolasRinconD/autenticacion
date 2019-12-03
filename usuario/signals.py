@@ -6,4 +6,6 @@ from .models import Usuarios
 @receiver(post_save, sender=User)
 def create_user(sender, instance, created, **kwargs):
     if created:
-        Usuarios.objects.create(user=instance, correo=instance.email, suscribirse=True)
+        usur = Usuarios(user=instance, correo=instance.email, suscribirse=True)
+        usur.save()
+        print(usur)
